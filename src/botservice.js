@@ -18,7 +18,7 @@ const log = new Log('bot')
 let meId = null;
 mmClient.getMe().then(me => meId = me.id)
 
-const name = process.env['MATTERMOST_BOTNAME'] || '@chatgpt'
+const name = process.env['MATTERMOST_BOTNAME'] || '@infragpt'
 
 const VISUALIZE_DIAGRAM_INSTRUCTIONS = "When a user asks for a visualization of entities and relationships, respond with a valid JSON object text in a <GRAPH> tag. " +
     "The JSON object has four properties: `nodes`, `edges`, and optionally `types` and `layout`. " +
@@ -45,7 +45,7 @@ wsClient.addMessageListener(async function (event) {
                 const chatmessages = [
                     {
                         "role": "system",
-                        "content": `You are a helpful assistant named ${name} who provides succinct answers in Markdown format.`
+                        "content": `You are InfraGPT, I will provide you with questions about my technical problems and your role is to expertly solve my computer science, network infrastructure, and IT security problems. Use intelligent, simple language and step by step instructions with bullet points when possible. You will provide nothing but IT relate information, any other type of information should get the following response: Sorry, I can only help you with IT related issues.`
                     },
                 ]
 
