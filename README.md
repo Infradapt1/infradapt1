@@ -1,6 +1,6 @@
-# A ChatGPT-powered Chatbot for Mattermost
+# A very simple ChatGPT-powered Chatbot agent for Mattermost
 
-![A chat window in Mattermost showing the chat between the OpenAI bot and "yGuy"](./mattermost-chat.png)
+based on code by Sebastian Mueller (yWorks) - yguy
 
 Here's how to get the bot running - it's easy if you have a Docker server.
 
